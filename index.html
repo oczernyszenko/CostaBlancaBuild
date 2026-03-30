@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bonalba Golf Hills | Apartamenty Costa Blanca od 280 800 € | 98–156 m² | 2–3 pok</title>
-  <meta name="description" content="Bonalba Golf Hills w Mutxamel koło Alicante: nowa inwestycja na Costa Blanca. Ceny 280 800–405 600 €, metraż 98–156 m², apartamenty 2–3 pok. Przy golfie, blisko morza, idealne pod inwestycję i wynajem.">
-  <meta name="keywords" content="Bonalba Golf Hills, Costa Blanca inwestycja, apartamenty Alicante, Mutxamel, nowe apartamenty Hiszpania, golf Alicante">
-  <link rel="canonical" href="https://example.com/pl/investments/bonalba-golf-hills/">
+  <meta name="description" content="Bonalba Golf Hills w Mutxamel koło Alicante: nowa inwestycja na Costa Blanca. Ceny 280 800–405 600 €, metraż 98–156 m², apartamenty 2–3 pok. Przy golfie, blisko morza, idealne pod inwestycję i wynajem.">  <link rel="canonical" href="https://example.com/pl/investments/bonalba-golf-hills/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Olga Chernyshenko">
   <meta name="theme-color" content="#296c76">
@@ -21,7 +19,7 @@
   <meta property="og:image" content="https://example.com/images/new-dev.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Bonalba Golf Hills — nowa inwestycja na Costa Blanca">
+  <meta property="og:image:alt" content="Bonalba Golf Hills apartamenty Costa Blanca Mutxamel Alicante golf">
   <meta property="og:url" content="https://example.com/pl/investments/bonalba-golf-hills/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -67,15 +65,21 @@
     p { margin: 0 0 14px; line-height: 1.72; color: var(--text-soft); }
 
     .container {
-      width: min(var(--maxw), calc(100% - 32px));
+      width: 100%;
+      max-width: 1280px;
       margin: 0 auto;
+      padding: 0 40px;
     }
 
-    .page { padding: 28px 0 72px; }
+    .page {
+      padding: 40px 0 80px;
+    }
 
     .hero-card,
     .section-card,
     .cta-box {
+      margin-left: auto;
+      margin-right: auto;
       background: rgba(255,255,255,0.92);
       backdrop-filter: blur(10px);
       border: 1px solid var(--line);
@@ -180,7 +184,9 @@
       font-size: 24px;
     }
 
-    .plans-viewport { overflow: visible; }
+    .plans-viewport {
+      overflow: hidden;
+    }
 
     .plans-track {
       display: flex;
@@ -201,6 +207,7 @@
       cursor: pointer;
       transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, filter .22s ease;
       transform-origin: center center;
+      overflow: hidden;
     }
 
     .plans-track img:hover,
@@ -211,11 +218,11 @@
     }
 
     .plans-track img.zoom-preview {
-      transform: scale(1.28);
-      z-index: 10;
-      box-shadow: 0 28px 60px rgba(15,23,42,.20);
-      border-color: rgba(15,23,42,0.12);
-      filter: saturate(1.04) contrast(1.03);
+      transform: scale(1.12);
+      z-index: 2;
+      box-shadow: 0 20px 40px rgba(15,23,42,.16);
+      border-color: rgba(15,23,42,0.10);
+      filter: saturate(1.03) contrast(1.02);
     }
 
     .content { margin-top: 30px; }
@@ -667,18 +674,18 @@
           <div class="plans-viewport">
             <div class="plans-track" id="planTrack">
               <img class="active-plan" src="images/new-dev.jpg" alt="Bonalba Golf Hills — plan 1">
-              <img src="images/premium-investment.jpg" alt="Bonalba Golf Hills — plan 2">
-              <img src="images/wood-project-1.jpg" alt="Bonalba Golf Hills — plan 3">
-              <img src="images/wood-project-2.jpg" alt="Bonalba Golf Hills — plan 4">
-              <img src="images/wood-project-3.jpg" alt="Bonalba Golf Hills — plan 5">
-              <img src="images/wood-technology.jpg" alt="Bonalba Golf Hills — plan 6">
+              <img src="images/premium-investment.jpg" alt="Bonalba Golf Hills — plan 2" loading="lazy">
+              <img src="images/wood-project-1.jpg" alt="Bonalba Golf Hills — plan 3" loading="lazy">
+              <img src="images/wood-project-2.jpg" alt="Bonalba Golf Hills — plan 4" loading="lazy">
+              <img src="images/wood-project-3.jpg" alt="Bonalba Golf Hills — plan 5" loading="lazy">
+              <img src="images/wood-technology.jpg" alt="Bonalba Golf Hills — plan 6" loading="lazy">
             </div>
           </div>
         </div>
       </div>
 
       <div class="content">
-        <h1>Bonalba Golf Hills</h1>
+        <h1>Bonalba Golf Hills – apartamenty Costa Blanca przy golfie i morzu</h1>
         <div class="subtitle">Hiszpania · Mutxamel (Alicante)</div>
         <div class="price">280 800 € – 405 600 €</div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;">
@@ -968,9 +975,7 @@
           "@type": "AggregateOffer",
           "priceCurrency": "EUR",
           "lowPrice": "280800",
-          "highPrice": "405600",
-          "offerCount": "12",
-          "availability": "https://schema.org/InStock",
+          "highPrice": "405600",          "availability": "https://schema.org/InStock",
           "url": "https://example.com/pl/investments/bonalba-golf-hills/"
         }
       },
