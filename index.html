@@ -1,4 +1,43 @@
 <!DOCTYPE html>
+<!--
+UNIWERSALNY SZABLON KARTY INWESTYCJI
+
+PRZY KAŻDEJ NOWEJ INWESTYCJI ZMIEŃ:
+1) <title>
+2) meta description
+3) canonical
+4) og:title / og:description / og:image / og:url / twitter:title / twitter:description / twitter:image
+5) h1
+6) subtitle
+7) price
+8) KPI: € / m² / pok
+9) lead text
+10) parametry inwestycji
+11) galleryImages w JS
+12) investmentMeta w JS
+13) schema.org na dole
+
+REKOMENDOWANE NAZWY PLIKÓW:
+- główne foto: slug-main.jpg
+- foto 2: slug-view-1.jpg
+- foto 3: slug-view-2.jpg
+- foto 4: slug-lifestyle-1.jpg
+- foto 5: slug-lifestyle-2.jpg
+- plan 1: slug-plan-1.jpg
+- plan 2: slug-plan-2.jpg
+- plan 3: slug-plan-3.jpg
+
+PRZYKŁADOWY SLUG:
+bonalba-golf-hills
+
+PRZYKŁADOWY UKŁAD PLIKÓW BEZ FOLDERU images:
+bonalba-golf-hills-main.jpg
+bonalba-golf-hills-view-1.jpg
+bonalba-golf-hills-view-2.jpg
+bonalba-golf-hills-lifestyle-1.jpg
+bonalba-golf-hills-plan-1.jpg
+bonalba-golf-hills-plan-2.jpg
+-->
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
@@ -8,24 +47,25 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Olga Chernyshenko">
   <meta name="theme-color" content="#296c76">
+  <link rel="preload" as="image" href="new-dev.jpg" fetchpriority="high">
   <meta name="format-detection" content="telephone=no">
-  <link rel="icon" href="images/favicon.png">
+  <link rel="icon" href="favicon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:site_name" content="Costa Blanca Invest &amp; Build">
   <meta property="og:title" content="Bonalba Golf Hills | 280 800–405 600 € | 98–156 m² | 2–3 pok">
   <meta property="og:description" content="Nowa inwestycja w Mutxamel koło Alicante. Apartamenty 2–3 pok, metraż 98–156 m², ceny 280 800–405 600 €. Przy golfie i blisko morza.">
-  <meta property="og:image" content="https://example.com/images/new-dev.jpg">
+  <meta property="og:image" content="https://example.com/new-dev.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Bonalba Golf Hills apartamenty Costa Blanca Mutxamel Alicante golf">
+  <meta property="og:image:alt" content="Bonalba Golf Hills – apartamenty Costa Blanca przy golfie i morzu, zdjęcie główne">
   <meta property="og:url" content="https://example.com/pl/investments/bonalba-golf-hills/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bonalba Golf Hills | 280 800–405 600 € | 98–156 m² | 2–3 pok">
   <meta name="twitter:description" content="Nowa inwestycja w Mutxamel koło Alicante. Apartamenty 2–3 pok, metraż 98–156 m², ceny 280 800–405 600 €.">
-  <meta name="twitter:image" content="https://example.com/images/new-dev.jpg">
+  <meta name="twitter:image" content="https://example.com/new-dev.jpg">
 
   <style>
     :root {
@@ -667,7 +707,7 @@
       <div class="hero-card">
         <div class="gallery-main">
           <button class="nav-btn prev" type="button" aria-label="Poprzednie zdjęcie">‹</button>
-          <img id="mainImage" src="images/new-dev.jpg" alt="Bonalba Golf Hills — nowa inwestycja na Costa Blanca">
+          <img id="mainImage" src="new-dev.jpg" alt="Bonalba Golf Hills – apartamenty Costa Blanca przy golfie i morzu, zdjęcie główne" fetchpriority="high" decoding="async">
           <button class="nav-btn next" type="button" aria-label="Następne zdjęcie">›</button>
         </div>
 
@@ -677,13 +717,19 @@
           <div class="plans-label">Planowania</div>
           <div class="plans-viewport">
             <div class="plans-track" id="planTrack">
-              <img class="active-plan" src="images/new-dev.jpg" alt="Bonalba Golf Hills — plan 1">
-              <img src="images/premium-investment.jpg" alt="Bonalba Golf Hills — plan 2" loading="lazy">
-              <img src="images/wood-project-1.jpg" alt="Bonalba Golf Hills — plan 3" loading="lazy">
-              <img src="images/wood-project-2.jpg" alt="Bonalba Golf Hills — plan 4" loading="lazy">
-              <img src="images/wood-project-3.jpg" alt="Bonalba Golf Hills — plan 5" loading="lazy">
-              <img src="images/wood-technology.jpg" alt="Bonalba Golf Hills — plan 6" loading="lazy">
+              <img class="active-plan" src="new-dev.jpg" alt="Bonalba Golf Hills — plan 1">
+              <img src="premium-investment.jpg" alt="Bonalba Golf Hills — plan 2" loading="lazy" decoding="async">
+              <img src="wood-project-1.jpg" alt="Bonalba Golf Hills — plan 3" loading="lazy" decoding="async">
+              <img src="wood-project-2.jpg" alt="Bonalba Golf Hills — plan 4" loading="lazy" decoding="async">
+              <img src="wood-project-3.jpg" alt="Bonalba Golf Hills — plan 5" loading="lazy" decoding="async">
+              <img src="wood-technology.jpg" alt="Bonalba Golf Hills — plan 6" loading="lazy" decoding="async">
             </div>
+            <!--
+            SZABLON PLANÓW:
+            <img class="active-plan" src="slug-plan-1.jpg" alt="NAZWA — plan 1" loading="lazy" decoding="async">
+            <img src="slug-plan-2.jpg" alt="NAZWA — plan 2" loading="lazy" decoding="async">
+            <img src="slug-plan-3.jpg" alt="NAZWA — plan 3" loading="lazy" decoding="async">
+            -->
           </div>
         </div>
       </div>
@@ -782,14 +828,25 @@
         return;
       }
 
+      const investmentMeta = {
+        name: 'Bonalba Golf Hills',          // nazwa inwestycji
+        location: 'Mutxamel Alicante',       // lokalizacja do alt i SEO
+        shareImage: 'new-dev.jpg',           // główne zdjęcie do sharowania
+        slug: 'bonalba-golf-hills'           // slug URL
+      };
+
       const galleryImages = [
-        'images/new-dev.jpg',
-        'images/premium-investment.jpg',
-        'images/hero-sea-palm.jpg',
-        'images/wood-project-1.jpg',
-        'images/wood-project-2.jpg',
-        'images/wood-project-3.jpg'
+        'new-dev.jpg',                // foto główne
+        'premium-investment.jpg',     // foto 2
+        'hero-sea-palm.jpg',          // foto 3
+        'wood-project-1.jpg',         // foto 4
+        'wood-project-2.jpg',         // foto 5
+        'wood-project-3.jpg'          // foto 6
       ];
+
+      function generateAlt(kind, index) {
+        return `${investmentMeta.name} – ${kind} ${index}, ${investmentMeta.location}`;
+      }
 
       let mainIndex = 0;
       let startX = 0;
@@ -801,6 +858,9 @@
 
       function showMain() {
         main.src = galleryImages[mainIndex];
+        main.alt = mainIndex === 0
+          ? `${investmentMeta.name} – apartamenty Costa Blanca przy golfie i morzu, zdjęcie główne`
+          : generateAlt('zdjęcie', mainIndex + 1);
       }
 
       function stopAutoplay() {
@@ -901,7 +961,8 @@
         }
       }, { passive: true });
 
-      planImages.forEach((img) => {
+      planImages.forEach((img, index) => {
+        img.alt = generateAlt('plan', index + 1);
         const activatePlan = () => {
           main.src = img.src;
           planImages.forEach((el) => el.classList.remove('active-plan', 'zoom-preview'));
@@ -942,7 +1003,7 @@
         "inLanguage": "pl",
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://example.com/images/new-dev.jpg"
+          "url": "https://example.com/new-dev.jpg"
         }
       },
       {
@@ -950,9 +1011,9 @@
         "name": "Bonalba Golf Hills",
         "description": "Nowa inwestycja deweloperska Bonalba Golf Hills w Mutxamel koło Alicante.",
         "image": [
-          "https://example.com/images/new-dev.jpg",
-          "https://example.com/images/premium-investment.jpg",
-          "https://example.com/images/hero-sea-palm.jpg"
+          "https://example.com/new-dev.jpg",
+          "https://example.com/premium-investment.jpg",
+          "https://example.com/hero-sea-palm.jpg"
         ],
         "brand": {
           "@type": "Brand",
