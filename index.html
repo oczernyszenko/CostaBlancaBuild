@@ -163,10 +163,10 @@
     .prev-plan { left: 8px; }
     .next-plan { right: 8px; }
     .plans-wrap {
-      background: #fff;
-      border-top: 1px solid var(--line-soft);
       position: relative;
       padding: 16px 56px 20px;
+      background: transparent;
+      border-top: none;
     }
     .plans-wrap { position: relative; padding: 16px 56px 20px; }
     .plans-label {
@@ -225,7 +225,10 @@
       filter: saturate(1.03) contrast(1.02);
     }
 
-    .content { margin-top: 30px; }
+    .content {
+      margin-top: 30px;
+      width: 100%;
+    }
 
     h1 {
       font-size: clamp(34px, 5vw, 54px);
@@ -325,7 +328,8 @@
     }
 
     .lead {
-      max-width: 950px;
+      width: 100%;
+      max-width: 100%;
       font-size: 16px;
       text-wrap: pretty;
       text-align: justify;
