@@ -849,6 +849,8 @@ bonalba-golf-hills-plan-2.jpg
         'bonalba-golf-hills-bedroom.jpg'
       ];
 
+      const galleryCount = galleryImages.length;
+
       function generateAlt(kind, index) {
         return `${investmentMeta.name} – ${kind} ${index}, ${investmentMeta.location}`;
       }
@@ -879,7 +881,7 @@ bonalba-golf-hills-plan-2.jpg
         stopAutoplay();
         if (autoplayStopped) return;
         autoplay = window.setInterval(() => {
-          mainIndex = (mainIndex + 1) % galleryImages.length;
+          mainIndex = (mainIndex + 1) % galleryCount;
           showMain();
         }, 3800);
       }
@@ -897,14 +899,14 @@ bonalba-golf-hills-plan-2.jpg
       nextBtn.addEventListener('click', () => {
         autoplayStopped = true;
         stopAutoplay();
-        mainIndex = (mainIndex + 1) % galleryImages.length;
+        mainIndex = (mainIndex + 1) % galleryCount;
         showMain();
       });
 
       prevBtn.addEventListener('click', () => {
         autoplayStopped = true;
         stopAutoplay();
-        mainIndex = (mainIndex - 1 + galleryImages.length) % galleryImages.length;
+        mainIndex = (mainIndex - 1 + galleryCount) % galleryCount;
         showMain();
       });
 
@@ -1017,8 +1019,11 @@ bonalba-golf-hills-plan-2.jpg
         "description": "Nowa inwestycja deweloperska Bonalba Golf Hills w Mutxamel koło Alicante.",
         "image": [
           "https://example.com/bonalba-golf-hills-main.jpg",
-          "https://example.com/bonalba-golf-hills-view-1.jpg",
-          "https://example.com/bonalba-golf-hills-view-2.jpg"
+          "https://example.com/bonalba-golf-hills-exterior-1.jpg",
+          "https://example.com/bonalba-golf-hills-exterior-2.jpg",
+          "https://example.com/bonalba-golf-hills-interior-1.jpg",
+          "https://example.com/bonalba-golf-hills-interior-2.jpg",
+          "https://example.com/bonalba-golf-hills-bedroom.jpg"
         ],
         "brand": {
           "@type": "Brand",
