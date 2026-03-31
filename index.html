@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bonalba Golf Hills | Apartamenty Costa Blanca od 280 800 € | 98–156 m² | 2–3 pok</title>
   <meta name="description" content="Bonalba Golf Hills w Mutxamel koło Alicante: nowa inwestycja na Costa Blanca. Ceny od 280 800 €, metraż 98–156 m², apartamenty 2–3 pokoje. Przy golfie i blisko morza, idealne pod inwestycję i wynajem." id="meta-description">
-  <link rel="canonical" href="https://example.com/pl/inwestycje/bonalba-golf-hills/" id="canonical-link">
+  <link rel="canonical" href="https://oczernyszenko.github.io/CostaBlancaBuild/" id="canonical-link">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Olga Chernyshenko">
   <meta name="theme-color" content="#296c76">
@@ -13,25 +13,26 @@
   <meta name="format-detection" content="telephone=no">
   <link rel="icon" href="favicon.jpg">
 
-  <link rel="alternate" hreflang="pl" href="https://example.com/pl/inwestycje/bonalba-golf-hills/">
-  <link rel="alternate" hreflang="ru" href="https://example.com/ru/investicii/bonalba-golf-hills/">
-  <link rel="alternate" hreflang="x-default" href="https://example.com/pl/inwestycje/bonalba-golf-hills/">
+  <link rel="alternate" hreflang="x-default" href="https://oczernyszenko.github.io/CostaBlancaBuild/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL" id="og-locale">
   <meta property="og:site_name" content="Costa Blanca Invest &amp; Build">
   <meta property="og:title" content="Bonalba Golf Hills | 280 800–405 600 € | 98–156 m² | 2–3 pok" id="og-title">
   <meta property="og:description" content="Nowa inwestycja w Mutxamel koło Alicante. Apartamenty 2–3 pok, metraż 98–156 m², ceny 280 800–405 600 €. Przy golfie i blisko morza." id="og-description">
-  <meta property="og:image" content="https://example.com/bonalba-golf-hills-main.jpg?v=1">
+  <meta property="og:image" content="https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-og.jpg" id="og-image">
+  <meta property="og:image:url" content="https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-og.jpg" id="og-image-url">
+  <meta property="og:image:secure_url" content="https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-og.jpg" id="og-image-secure">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Bonalba Golf Hills – apartamenty Costa Blanca przy golfie i morzu, zdjęcie główne" id="og-image-alt">
-  <meta property="og:url" content="https://example.com/pl/inwestycje/bonalba-golf-hills/" id="og-url">
+  <meta property="og:url" content="https://oczernyszenko.github.io/CostaBlancaBuild/" id="og-url">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bonalba Golf Hills | 280 800–405 600 € | 98–156 m² | 2–3 pok" id="twitter-title">
   <meta name="twitter:description" content="Nowa inwestycja w Mutxamel koło Alicante. Apartamenty 2–3 pok, metraż 98–156 m², ceny 280 800–405 600 €." id="twitter-description">
-  <meta name="twitter:image" content="https://example.com/bonalba-golf-hills-main.jpg?v=1">
+  <meta name="twitter:image" content="https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-og.jpg" id="twitter-image">
+  <meta name="twitter:image:alt" content="Bonalba Golf Hills – apartamenty Costa Blanca przy golfie i morzu">
 
   <style>
     :root {
@@ -652,8 +653,8 @@
   <div class="page">
     <div class="container">
       <div class="lang-switcher" aria-label="Wybór języka">
-        <a href="/ru/investicii/bonalba-golf-hills/" data-lang="ru" class="lang-link">RU</a>
-        <a href="/pl/inwestycje/bonalba-golf-hills/" data-lang="pl" class="lang-link active-lang">PL</a>
+        <button type="button" data-lang="pl" class="lang-link active-lang">PL</button>
+        <button type="button" data-lang="ru" class="lang-link">RU</button>
       </div>
 
       <div class="hero-card">
@@ -778,29 +779,38 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const BUILD_LANG = document.documentElement.lang || 'pl';
-      const siteBase = 'https://example.com';
+      let currentLang = 'pl';
+      const pageUrl = new URL(window.location.href);
+      const baseHref = `${pageUrl.origin}${pageUrl.pathname}`;
+      const baseDir = baseHref.endsWith('/') ? baseHref : `${baseHref.substring(0, baseHref.lastIndexOf('/') + 1)}`;
+      const absoluteImage = (name) => new URL(name, baseDir).href;
 
       const localeMeta = {
         pl: {
-          htmlLang: 'pl', locale: 'pl_PL', path: '/pl/inwestycje/bonalba-golf-hills/',
+          htmlLang: 'pl',
+          locale: 'pl_PL',
           title: 'Bonalba Golf Hills | Apartamenty Costa Blanca od 280 800 € | 98–156 m² | 2–3 pok',
           description: 'Bonalba Golf Hills w Mutxamel koło Alicante: nowa inwestycja na Costa Blanca. Ceny od 280 800 €, metraż 98–156 m², apartamenty 2–3 pokoje. Przy golfie i blisko morza, idealne pod inwestycję i wynajem.',
           ogTitle: 'Bonalba Golf Hills | 280 800–405 600 € | 98–156 m² | 2–3 pok',
           ogDescription: 'Nowa inwestycja w Mutxamel koło Alicante. Apartamenty 2–3 pok, metraż 98–156 m², ceny 280 800–405 600 €. Przy golfie i blisko morza.',
           twitterTitle: 'Bonalba Golf Hills | 280 800–405 600 € | 98–156 m² | 2–3 pok',
           twitterDescription: 'Nowa inwestycja w Mutxamel koło Alicante. Apartamenty 2–3 pok, metraż 98–156 m², ceny 280 800–405 600 €.',
-          ogImageAlt: 'Bonalba Golf Hills – apartamenty Costa Blanca przy golfie i morzu, zdjęcie główne'
+          ogImageAlt: 'Bonalba Golf Hills – apartamenty Costa Blanca przy golfie i morzu, zdjęcie główne',
+          whatsappTop: 'https://wa.me/34604158859?text=Witam%2C%20interesuje%20mnie%20Bonalba%20Golf%20Hills',
+          whatsappCta: 'https://wa.me/34604158859?text=Interesuje%20mnie%20Bonalba%20Golf%20Hills%20na%20Costa%20Blanca.'
         },
         ru: {
-          htmlLang: 'ru', locale: 'ru_RU', path: '/ru/investicii/bonalba-golf-hills/',
+          htmlLang: 'ru',
+          locale: 'ru_RU',
           title: 'Bonalba Golf Hills | Квартиры на Costa Blanca от 280 800 € | 98–156 м² | 2–3 комнаты',
           description: 'Bonalba Golf Hills в Мутхамеле рядом с Аликанте — новая инвестиция на Costa Blanca. Цены от 280 800 €, площадь 98–156 м², квартиры 2–3 комнаты. Рядом с гольфом и морем, идеально для инвестиций и аренды.',
           ogTitle: 'Bonalba Golf Hills | 280 800–405 600 € | 98–156 м² | 2–3 комнаты',
           ogDescription: 'Новая инвестиция в Мутхамеле рядом с Аликанте. Квартиры 2–3 комнаты, площадь 98–156 м², цены 280 800–405 600 €. Рядом с гольфом и морем.',
           twitterTitle: 'Bonalba Golf Hills | 280 800–405 600 € | 98–156 м² | 2–3 комнаты',
           twitterDescription: 'Новая инвестиция в Мутхамеле рядом с Аликанте. Квартиры 2–3 комнаты, площадь 98–156 м², цены 280 800–405 600 €.',
-          ogImageAlt: 'Bonalba Golf Hills – квартиры на Costa Blanca рядом с гольфом и морем, главное фото'
+          ogImageAlt: 'Bonalba Golf Hills – квартиры на Costa Blanca рядом с гольфом и морем, главное фото',
+          whatsappTop: 'https://wa.me/34604158859?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20Bonalba%20Golf%20Hills',
+          whatsappCta: 'https://wa.me/34604158859?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20Bonalba%20Golf%20Hills%20%D0%BD%D0%B0%20Costa%20Blanca.'
         }
       };
 
@@ -811,7 +821,7 @@
           call_now_inline: '📞 +34 604 15 88 59', whatsapp_inline: '💬 WhatsApp',
           lead_1: 'Bonalba Golf Hills to nowa inwestycja deweloperska na Costa Blanca, zlokalizowana w Mutxamel koło Alicante, w otoczeniu pola golfowego Bonalba i zaledwie kilka minut od wybrzeża Morza Śródziemnego. Projekt łączy nowoczesną architekturę, duże tarasy oraz widoki na zieleń i przestrzeń, tworząc styl życia typu resort — spokojny, prywatny i jednocześnie dobrze skomunikowany z miastem.',
           lead_2: 'Lokalizacja Bonalba jest jednym z kluczowych powodów zakupu nieruchomości w tej części Costa Blanca. To obszar wybierany przez klientów, którzy chcą uniknąć turystycznego zgiełku, ale nadal mieć szybki dostęp do plaż San Juan, centrum Alicante oraz lotniska. W efekcie powstaje unikalny balans: cisza i zieleń przy jednoczesnej bliskości infrastruktury miejskiej.',
-          lead_3: 'Nieruchomości w Bonalba kupują przede wszystkim klienci z Europy Zachodniej (Niemcy, Belgia, Francja, Skandynawia), inwestorzy szukający stabilnego wynajmu krótkoterminowego oraz osoby poszukujące drugiego domu w Hiszpanii. Apartamenty 2- i 3-pokojowe z tarasami, basenem i strefami wspólnymi dobrze wpisują się zarówno w potrzeby wynajmu sezonowego, jak i komfortowego życia przez cały rok.',
+          lead_3: 'Nieruchomości w Bonalba kupują przede wszystkim klienci z Europy Zachodniej, inwestorzy szukający stabilnego wynajmu krótkoterminowego oraz osoby poszukujące drugiego domu w Hiszpanii. Apartamenty 2- i 3-pokojowe z tarasami, basenem i strefami wspólnymi dobrze wpisują się zarówno w potrzeby wynajmu sezonowego, jak i komfortowego życia przez cały rok.',
           lead_4: 'Dodatkową przewagą inwestycji jest relacja ceny do jakości i lokalizacji — Bonalba oferuje wyższe poczucie przestrzeni i prywatności niż nadmorskie dzielnice, przy bardziej atrakcyjnym poziomie cenowym. Dzięki temu projekt ma realny potencjał wzrostu wartości oraz płynności odsprzedaży w przyszłości.',
           lead_5: 'Z perspektywy inwestora Costa Blanca pozostaje jednym z najmocniejszych rynków w Hiszpanii, a Bonalba wyróżnia się jako segment lifestyle + investment: golf, zieleń, spokojna zabudowa i międzynarodowa społeczność. To połączenie przyciąga najemców i kupujących, co przekłada się na stabilny popyt i bezpieczeństwo inwestycji.',
           params_title: 'Parametry inwestycji',
@@ -826,7 +836,7 @@
           call_now_inline: '📞 +34 604 15 88 59', whatsapp_inline: '💬 WhatsApp',
           lead_1: 'Bonalba Golf Hills — новая девелоперская инвестиция на Costa Blanca, расположенная в Мутхамеле рядом с Аликанте, в окружении гольф-поля Bonalba и всего в нескольких минутах от Средиземного моря. Проект сочетает современную архитектуру, просторные террасы и виды на зелёные зоны и открытое пространство, создавая формат жизни resort: спокойный, приватный и при этом хорошо связанный с городом.',
           lead_2: 'Локация Bonalba — один из ключевых факторов покупки недвижимости в этой части Costa Blanca. Этот район выбирают клиенты, которые хотят избежать туристического шума, но при этом иметь быстрый доступ к пляжам San Juan, центру Аликанте и аэропорту. В результате получается редкий баланс: тишина и зелень при близости всей городской инфраструктуры.',
-          lead_3: 'Недвижимость в Bonalba покупают прежде всего клиенты из Западной Европы (Германия, Бельгия, Франция, Скандинавия), инвесторы, ориентированные на стабильную краткосрочную аренду, а также те, кто ищет второй дом в Испании. Квартиры с 2 и 3 спальнями, террасами, бассейном и общими зонами хорошо подходят как для сезонной аренды, так и для комфортной жизни круглый год.',
+          lead_3: 'Недвижимость в Bonalba покупают прежде всего клиенты из Западной Европы, инвесторы, ориентированные на стабильную краткосрочную аренду, а также те, кто ищет второй дом в Испании. Квартиры с 2 и 3 спальнями, террасами, бассейном и общими зонами хорошо подходят как для сезонной аренды, так и для комфортной жизни круглый год.',
           lead_4: 'Дополнительным преимуществом проекта является соотношение цены, качества и локации — Bonalba даёт больше пространства и приватности, чем прибрежные районы, при более привлекательном уровне цен. Благодаря этому проект имеет реальный потенциал роста стоимости и ликвидности при последующей продаже.',
           lead_5: 'С точки зрения инвестора Costa Blanca остаётся одним из самых сильных рынков Испании, а Bonalba выделяется как сегмент lifestyle + investment: гольф, зелень, спокойная застройка и международное сообщество. Это сочетание привлекает арендаторов и покупателей, что означает стабильный спрос и более безопасную инвестицию.',
           params_title: 'Параметры инвестиции',
@@ -836,44 +846,6 @@
           cta_title: 'Запросить информацию о Bonalba Golf Hills', cta_text: 'Свяжитесь с нами, чтобы получить актуальную доступность, планировки и детали инвестиции.', phone_label: 'Телефон:', cta_call: 'Позвонить сейчас', cta_whatsapp: 'Написать в WhatsApp', prev_image: 'Предыдущее фото', next_image: 'Следующее фото', prev_plans: 'Предыдущие планировки', next_plans: 'Следующие планировки'
         }
       };
-
-      function applyLocaleHead(lang) {
-        const meta = localeMeta[lang] || localeMeta.pl;
-        document.documentElement.lang = meta.htmlLang;
-        document.title = meta.title;
-        document.getElementById('meta-description')?.setAttribute('content', meta.description);
-        document.getElementById('canonical-link')?.setAttribute('href', `${siteBase}${meta.path}`);
-        document.getElementById('og-locale')?.setAttribute('content', meta.locale);
-        document.getElementById('og-title')?.setAttribute('content', meta.ogTitle);
-        document.getElementById('og-description')?.setAttribute('content', meta.ogDescription);
-        document.getElementById('og-image-alt')?.setAttribute('content', meta.ogImageAlt);
-        document.getElementById('og-url')?.setAttribute('content', `${siteBase}${meta.path}`);
-        document.getElementById('twitter-title')?.setAttribute('content', meta.twitterTitle);
-        document.getElementById('twitter-description')?.setAttribute('content', meta.twitterDescription);
-      }
-
-      function applyTranslations(lang) {
-        applyLocaleHead(lang);
-        const dict = translations[lang] || translations.pl;
-        document.querySelectorAll('[data-i18n]').forEach((el) => {
-          const key = el.getAttribute('data-i18n');
-          if (!dict[key]) return;
-          if (dict[key].includes('<strong>')) {
-            el.innerHTML = dict[key];
-          } else {
-            el.textContent = dict[key];
-          }
-        });
-        document.querySelectorAll('[data-i18n-aria-label]').forEach((el) => {
-          const key = el.getAttribute('data-i18n-aria-label');
-          if (dict[key]) el.setAttribute('aria-label', dict[key]);
-        });
-      }
-
-      applyTranslations(BUILD_LANG);
-      document.querySelectorAll('.lang-link').forEach((link) => {
-        link.classList.toggle('active-lang', link.dataset.lang === BUILD_LANG);
-      });
 
       const main = document.getElementById('mainImage');
       const lightbox = document.getElementById('lightbox');
@@ -885,16 +857,10 @@
       const planTrack = document.getElementById('planTrack');
       const planImages = Array.from(document.querySelectorAll('.plans-track img'));
       const heroCard = document.querySelector('.hero-card');
-
-      if (!main || !nextBtn || !prevBtn || !nextPlanBtn || !prevPlanBtn || !planTrack || !planImages.length) return;
-
-      const investmentMeta = {
-        name: 'Bonalba Golf Hills',
-        location: BUILD_LANG === 'ru' ? 'Мутхамель Аликанте' : 'Mutxamel Alicante',
-        shareImage: 'bonalba-golf-hills-main.jpg',
-        slug: 'bonalba-golf-hills'
-      };
-
+      const langButtons = Array.from(document.querySelectorAll('.lang-link'));
+      const whatsappInline = document.querySelector('[data-i18n="whatsapp_inline"]');
+      const ctaWhatsapp = document.querySelector('[data-i18n="cta_whatsapp"]');
+      const stickyWhatsapp = document.querySelector('.sticky-wa');
       const galleryImages = [
         'bonalba-golf-hills-main.jpg',
         'bonalba-golf-hills-exterior-1.jpg',
@@ -903,14 +869,53 @@
         'bonalba-golf-hills-interior-2.jpg',
         'bonalba-golf-hills-bedroom.jpg'
       ];
-
       const galleryCount = galleryImages.length;
-      const imageWord = BUILD_LANG === 'ru' ? 'фото' : 'zdjęcie';
-      const planWord = BUILD_LANG === 'ru' ? 'план' : 'plan';
+      const investmentMeta = {
+        name: 'Bonalba Golf Hills',
+        location: 'Mutxamel Alicante'
+      };
 
-      function generateAlt(kind, index) {
-        return `${investmentMeta.name} – ${kind} ${index}, ${investmentMeta.location}`;
+      const generateAlt = (kind, index) => `${investmentMeta.name} – ${kind} ${index}, ${investmentMeta.location}`;
+
+      function applyLocaleHead(lang) {
+        const meta = localeMeta[lang] || localeMeta.pl;
+        document.documentElement.lang = meta.htmlLang;
+        document.title = meta.title;
+        document.getElementById('meta-description')?.setAttribute('content', meta.description);
+        document.getElementById('canonical-link')?.setAttribute('href', baseHref);
+        document.getElementById('og-locale')?.setAttribute('content', meta.locale);
+        document.getElementById('og-title')?.setAttribute('content', meta.ogTitle);
+        document.getElementById('og-description')?.setAttribute('content', meta.ogDescription);
+        document.getElementById('og-url')?.setAttribute('content', baseHref);
+        document.getElementById('og-image')?.setAttribute('content', absoluteImage('bonalba-golf-hills-og.jpg'));
+        document.getElementById('og-image-url')?.setAttribute('content', absoluteImage('bonalba-golf-hills-og.jpg'));
+        document.getElementById('og-image-secure')?.setAttribute('content', absoluteImage('bonalba-golf-hills-og.jpg'));
+        document.getElementById('og-image-alt')?.setAttribute('content', meta.ogImageAlt);
+        document.getElementById('twitter-title')?.setAttribute('content', meta.twitterTitle);
+        document.getElementById('twitter-description')?.setAttribute('content', meta.twitterDescription);
+        document.getElementById('twitter-image')?.setAttribute('content', absoluteImage('bonalba-golf-hills-og.jpg'));
       }
+
+      function applyTranslations(lang) {
+        const dict = translations[lang] || translations.pl;
+        investmentMeta.location = lang === 'ru' ? 'Мутхамель Аликанте' : 'Mutxamel Alicante';
+        applyLocaleHead(lang);
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (!dict[key]) return;
+          if (dict[key].includes('<strong>')) el.innerHTML = dict[key); else el.textContent = dict[key];
+        });
+        document.querySelectorAll('[data-i18n-aria-label]').forEach((el) => {
+          const key = el.getAttribute('data-i18n-aria-label');
+          if (dict[key]) el.setAttribute('aria-label', dict[key]);
+        });
+        if (whatsappInline) whatsappInline.href = localeMeta[lang].whatsappTop;
+        if (ctaWhatsapp) ctaWhatsapp.href = localeMeta[lang].whatsappCta;
+        if (stickyWhatsapp) stickyWhatsapp.href = localeMeta[lang].whatsappCta;
+        langButtons.forEach((btn) => btn.classList.toggle('active-lang', btn.dataset.lang === lang));
+      }
+
+      if (!main || !nextBtn || !prevBtn || !nextPlanBtn || !prevPlanBtn || !planTrack || !planImages.length) return;
 
       let mainIndex = 0;
       let startX = 0;
@@ -920,11 +925,12 @@
       let autoplay = null;
       let autoplayStopped = false;
 
+      function getImageWord() { return currentLang === 'ru' ? 'фото' : 'zdjęcie'; }
+      function getPlanWord() { return currentLang === 'ru' ? 'план' : 'plan'; }
+
       function showMain() {
         main.src = galleryImages[mainIndex];
-        main.alt = mainIndex === 0
-          ? localeMeta[BUILD_LANG].ogImageAlt
-          : generateAlt(imageWord, mainIndex + 1);
+        main.alt = mainIndex === 0 ? localeMeta[currentLang].ogImageAlt : generateAlt(getImageWord(), mainIndex + 1);
       }
 
       function stopAutoplay() {
@@ -949,8 +955,7 @@
         const gap = parseFloat(styles.columnGap || styles.gap || '12') || 12;
         const maxIndex = Math.max(planImages.length - visiblePlans, 0);
         if (planIndex > maxIndex) planIndex = maxIndex;
-        const offset = planIndex * (cardWidth + gap);
-        planTrack.style.transform = `translateX(-${offset}px)`;
+        planTrack.style.transform = `translateX(-${planIndex * (cardWidth + gap)}px)`;
       }
 
       nextBtn.addEventListener('click', () => {
@@ -967,10 +972,7 @@
         showMain();
       });
 
-      main.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-      }, { passive: true });
-
+      main.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
       main.addEventListener('touchend', (e) => {
         const dx = e.changedTouches[0].clientX - startX;
         if (Math.abs(dx) > 40) {
@@ -982,7 +984,6 @@
       }, { passive: true });
 
       main.addEventListener('click', () => {
-        if (!lightbox || !lightboxImage) return;
         autoplayStopped = true;
         stopAutoplay();
         lightboxImage.src = main.src;
@@ -990,12 +991,10 @@
         lightbox.setAttribute('aria-hidden', 'false');
       });
 
-      if (lightbox) {
-        lightbox.addEventListener('click', () => {
-          lightbox.classList.remove('open');
-          lightbox.setAttribute('aria-hidden', 'true');
-        });
-      }
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+      });
 
       nextPlanBtn.addEventListener('click', () => {
         planIndex = Math.min(planIndex + visiblePlans, Math.max(planImages.length - visiblePlans, 0));
@@ -1007,54 +1006,45 @@
         updatePlans();
       });
 
-      planTrack.addEventListener('touchstart', (e) => {
-        planStart = e.touches[0].clientX;
-      }, { passive: true });
-
+      planTrack.addEventListener('touchstart', (e) => { planStart = e.touches[0].clientX; }, { passive: true });
       planTrack.addEventListener('touchend', (e) => {
         const dx = e.changedTouches[0].clientX - planStart;
         if (Math.abs(dx) > 40) {
-          if (dx < 0) {
-            planIndex = Math.min(planIndex + visiblePlans, Math.max(planImages.length - visiblePlans, 0));
-          } else {
-            planIndex = Math.max(planIndex - visiblePlans, 0);
-          }
+          planIndex = dx < 0 ? Math.min(planIndex + visiblePlans, Math.max(planImages.length - visiblePlans, 0)) : Math.max(planIndex - visiblePlans, 0);
           updatePlans();
         }
       }, { passive: true });
 
       planImages.forEach((img, index) => {
-        img.alt = generateAlt(planWord, index + 1);
         const activatePlan = () => {
           main.src = img.src;
           planImages.forEach((el) => el.classList.remove('active-plan', 'zoom-preview'));
           img.classList.add('active-plan');
         };
-
-        img.addEventListener('mouseenter', () => {
-          activatePlan();
-          img.classList.add('zoom-preview');
-        });
-
-        img.addEventListener('mouseleave', () => {
-          img.classList.remove('zoom-preview');
-        });
-
+        img.addEventListener('mouseenter', () => { activatePlan(); img.classList.add('zoom-preview'); });
+        img.addEventListener('mouseleave', () => img.classList.remove('zoom-preview'));
         img.addEventListener('click', activatePlan);
+        img.alt = generateAlt(getPlanWord(), index + 1);
+      });
+
+      langButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          currentLang = btn.dataset.lang;
+          applyTranslations(currentLang);
+          showMain();
+          planImages.forEach((img, index) => { img.alt = generateAlt(getPlanWord(), index + 1); });
+        });
       });
 
       heroCard?.addEventListener('mouseenter', stopAutoplay);
       heroCard?.addEventListener('mouseleave', startAutoplay);
-
       window.addEventListener('resize', updatePlans);
       document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'hidden') {
-          stopAutoplay();
-        } else if (!autoplayStopped) {
-          startAutoplay();
-        }
+        if (document.visibilityState === 'hidden') stopAutoplay();
+        else if (!autoplayStopped) startAutoplay();
       });
 
+      applyTranslations(currentLang);
       showMain();
       updatePlans();
       startAutoplay();
@@ -1068,12 +1058,12 @@
       {
         "@type": "WebPage",
         "name": "Bonalba Golf Hills",
-        "url": "https://example.com/pl/inwestycje/bonalba-golf-hills/",
+        "url": "https://oczernyszenko.github.io/CostaBlancaBuild/",
         "description": "Bonalba Golf Hills w Mutxamel koło Alicante: nowa inwestycja na Costa Blanca. Ceny 280 800–405 600 €, metraż 98–156 m², apartamenty 2–3 pok.",
         "inLanguage": "pl",
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://example.com/bonalba-golf-hills-main.jpg?v=1"
+          "url": "https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-main.jpg"
         }
       },
       {
@@ -1081,12 +1071,12 @@
         "name": "Bonalba Golf Hills",
         "description": "Nowa inwestycja deweloperska Bonalba Golf Hills w Mutxamel koło Alicante.",
         "image": [
-          "https://example.com/bonalba-golf-hills-main.jpg",
-          "https://example.com/bonalba-golf-hills-exterior-1.jpg",
-          "https://example.com/bonalba-golf-hills-exterior-2.jpg",
-          "https://example.com/bonalba-golf-hills-interior-1.jpg",
-          "https://example.com/bonalba-golf-hills-interior-2.jpg",
-          "https://example.com/bonalba-golf-hills-bedroom.jpg"
+          "https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-main.jpg",
+          "https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-exterior-1.jpg",
+          "https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-exterior-2.jpg",
+          "https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-interior-1.jpg",
+          "https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-interior-2.jpg",
+          "https://oczernyszenko.github.io/CostaBlancaBuild/bonalba-golf-hills-bedroom.jpg"
         ],
         "brand": { "@type": "Brand", "name": "Costa Blanca Invest & Build" },
         "additionalProperty": [
@@ -1100,15 +1090,15 @@
           "lowPrice": "280800",
           "highPrice": "405600",
           "availability": "https://schema.org/InStock",
-          "url": "https://example.com/pl/inwestycje/bonalba-golf-hills/"
+          "url": "https://oczernyszenko.github.io/CostaBlancaBuild/"
         }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Costa Blanca Invest & Build", "item": "https://example.com/pl/" },
-          { "@type": "ListItem", "position": 2, "name": "Nowe inwestycje", "item": "https://example.com/pl/new-developments-costa-blanca/" },
-          { "@type": "ListItem", "position": 3, "name": "Bonalba Golf Hills", "item": "https://example.com/pl/inwestycje/bonalba-golf-hills/" }
+          { "@type": "ListItem", "position": 1, "name": "Costa Blanca Invest & Build", "item": "https://oczernyszenko.github.io/CostaBlancaBuild/" },
+          { "@type": "ListItem", "position": 2, "name": "Nowe inwestycje", "item": "https://oczernyszenko.github.io/CostaBlancaBuild/" },
+          { "@type": "ListItem", "position": 3, "name": "Bonalba Golf Hills", "item": "https://oczernyszenko.github.io/CostaBlancaBuild/" }
         ]
       }
     ]
