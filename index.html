@@ -77,34 +77,7 @@
 
     .page { padding: 40px 0 80px; }
 
-    .lang-switcher {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      margin-bottom: 16px;
-    }
-
-    .lang-link {
-      min-width: 42px;
-      border: 1px solid rgba(15,23,42,0.08);
-      padding: 7px 10px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 12px;
-      transition: .2s ease;
-      box-shadow: 0 4px 10px rgba(15,23,42,0.04);
-    }
-
-    .lang-link[data-lang="pl"] { background: linear-gradient(180deg, #ffffff 50%, #dc143c 50%); color: #111827; }
-    .lang-link[data-lang="ru"] { background: linear-gradient(180deg, #ffffff 33%, #2563eb 33%, #2563eb 66%, #dc2626 66%); color: #111827; }
-    .lang-link.active-lang {
-      box-shadow: 0 0 0 3px rgba(226,135,67,0.36), 0 10px 24px rgba(0,0,0,0.16);
-      transform: translateY(-2px) scale(1.06);
-      border-color: var(--accent);
-      outline: 2px solid rgba(226,135,67,0.22);
-    }
-
+    
     .hero-card,
     .section-card,
     .cta-box {
@@ -595,8 +568,6 @@
     }
 
     @media (max-width: 768px) {
-      .lang-switcher { justify-content: flex-start; margin-bottom: 12px; }
-      .lang-link { min-width: 40px; padding: 7px 9px; }
       .container { max-width: 100%; padding: 0 14px; }
       .page { padding: 20px 0 56px; }
       .gallery-main img { height: 320px; min-height: 320px; }
@@ -652,11 +623,6 @@
 <body>
   <div class="page">
     <div class="container">
-      <div class="lang-switcher" aria-label="Wybór języka">
-        <button type="button" data-lang="pl" class="lang-link active-lang">PL</button>
-        <button type="button" data-lang="ru" class="lang-link">RU</button>
-      </div>
-
       <div class="hero-card">
         <div class="gallery-main">
           <button class="nav-btn prev" type="button" aria-label="Poprzednie zdjęcie" data-i18n-aria-label="prev_image">‹</button>
@@ -779,7 +745,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      let currentLang = 'pl';
+      const currentLang = 'pl';
       const pageUrl = new URL(window.location.href);
       const baseHref = `${pageUrl.origin}${pageUrl.pathname}`;
       const baseDir = baseHref.endsWith('/') ? baseHref : `${baseHref.substring(0, baseHref.lastIndexOf('/') + 1)}`;
@@ -798,19 +764,6 @@
           ogImageAlt: 'Bonalba Golf Hills – apartamenty Costa Blanca przy golfie i morzu, zdjęcie główne',
           whatsappTop: 'https://wa.me/34604158859?text=Witam%2C%20interesuje%20mnie%20Bonalba%20Golf%20Hills',
           whatsappCta: 'https://wa.me/34604158859?text=Interesuje%20mnie%20Bonalba%20Golf%20Hills%20na%20Costa%20Blanca.'
-        },
-        ru: {
-          htmlLang: 'ru',
-          locale: 'ru_RU',
-          title: 'Bonalba Golf Hills | Квартиры на Costa Blanca от 280 800 € | 98–156 м² | 2–3 комнаты',
-          description: 'Bonalba Golf Hills в Мутхамеле рядом с Аликанте — новая инвестиция на Costa Blanca. Цены от 280 800 €, площадь 98–156 м², квартиры 2–3 комнаты. Рядом с гольфом и морем, идеально для инвестиций и аренды.',
-          ogTitle: 'Bonalba Golf Hills | 280 800–405 600 € | 98–156 м² | 2–3 комнаты',
-          ogDescription: 'Новая инвестиция в Мутхамеле рядом с Аликанте. Квартиры 2–3 комнаты, площадь 98–156 м², цены 280 800–405 600 €. Рядом с гольфом и морем.',
-          twitterTitle: 'Bonalba Golf Hills | 280 800–405 600 € | 98–156 м² | 2–3 комнаты',
-          twitterDescription: 'Новая инвестиция в Мутхамеле рядом с Аликанте. Квартиры 2–3 комнаты, площадь 98–156 м², цены 280 800–405 600 €.',
-          ogImageAlt: 'Bonalba Golf Hills – квартиры на Costa Blanca рядом с гольфом и морем, главное фото',
-          whatsappTop: 'https://wa.me/34604158859?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20Bonalba%20Golf%20Hills',
-          whatsappCta: 'https://wa.me/34604158859?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20Bonalba%20Golf%20Hills%20%D0%BD%D0%B0%20Costa%20Blanca.'
         }
       };
 
@@ -830,22 +783,7 @@
           roi_title: 'ROI i potencjał dochodu', roi_text_1: 'Inwestycje na Costa Blanca, szczególnie w lokalizacjach typu Bonalba (golf + bliskość morza), należą do najbardziej stabilnych segmentów rynku nieruchomości w Hiszpanii. Połączenie klimatu całorocznego, międzynarodowej klienteli oraz ograniczonej podaży nowych projektów wpływa na stały popyt najmu.', roi_text_2: 'W praktyce oznacza to możliwość budowania dochodu zarówno w modelu krótkoterminowym (turystyka, golf, sezon letni), jak i średnioterminowym (zimowanie klientów z Europy Północnej, remote work). Dzięki temu inwestor nie jest uzależniony od jednego źródła najmu.', roi_li_1: '<strong>Szacowany ROI:</strong> ok. 5–7% rocznie przy dobrze zarządzanym wynajmie', roi_li_2: '<strong>Sezon wysoki:</strong> maj – październik (turystyka + golf)', roi_li_3: '<strong>Sezon zimowy:</strong> długoterminowy najem dla klientów z Europy', roi_li_4: '<strong>Profil najemcy:</strong> turyści premium, golfiści, pary 45+, remote workers', roi_text_3: 'Dodatkowym elementem ROI jest potencjał wzrostu wartości nieruchomości. Bonalba rozwija się jako spokojna alternatywa dla nadmorskich dzielnic, co oznacza rosnące zainteresowanie i ograniczoną konkurencję nowych inwestycji w tej konkretnej lokalizacji.',
           cta_title: 'Zapytaj o Bonalba Golf Hills', cta_text: 'Skontaktuj się, aby otrzymać aktualną dostępność, planowania i szczegóły inwestycji.', phone_label: 'Telefon:', cta_call: 'Zadzwoń teraz', cta_whatsapp: 'Napisz na WhatsApp', prev_image: 'Poprzednie zdjęcie', next_image: 'Następne zdjęcie', prev_plans: 'Poprzednie plany', next_plans: 'Następne plany'
         },
-        ru: {
-          plans_label: 'Планировки', h1: 'Bonalba Golf Hills — квартиры на Costa Blanca рядом с гольфом и морем', subtitle: 'Испания · Мутхамель (Аликанте)',
-          price_range: '280 800 € – 405 600 €', area_range: '98 – 156 м²', rooms_short: 'комн',
-          call_now_inline: '📞 +34 604 15 88 59', whatsapp_inline: '💬 WhatsApp',
-          lead_1: 'Bonalba Golf Hills — новая девелоперская инвестиция на Costa Blanca, расположенная в Мутхамеле рядом с Аликанте, в окружении гольф-поля Bonalba и всего в нескольких минутах от Средиземного моря. Проект сочетает современную архитектуру, просторные террасы и виды на зелёные зоны и открытое пространство, создавая формат жизни resort: спокойный, приватный и при этом хорошо связанный с городом.',
-          lead_2: 'Локация Bonalba — один из ключевых факторов покупки недвижимости в этой части Costa Blanca. Этот район выбирают клиенты, которые хотят избежать туристического шума, но при этом иметь быстрый доступ к пляжам San Juan, центру Аликанте и аэропорту. В результате получается редкий баланс: тишина и зелень при близости всей городской инфраструктуры.',
-          lead_3: 'Недвижимость в Bonalba покупают прежде всего клиенты из Западной Европы, инвесторы, ориентированные на стабильную краткосрочную аренду, а также те, кто ищет второй дом в Испании. Квартиры с 2 и 3 спальнями, террасами, бассейном и общими зонами хорошо подходят как для сезонной аренды, так и для комфортной жизни круглый год.',
-          lead_4: 'Дополнительным преимуществом проекта является соотношение цены, качества и локации — Bonalba даёт больше пространства и приватности, чем прибрежные районы, при более привлекательном уровне цен. Благодаря этому проект имеет реальный потенциал роста стоимости и ликвидности при последующей продаже.',
-          lead_5: 'С точки зрения инвестора Costa Blanca остаётся одним из самых сильных рынков Испании, а Bonalba выделяется как сегмент lifestyle + investment: гольф, зелень, спокойная застройка и международное сообщество. Это сочетание привлекает арендаторов и покупателей, что означает стабильный спрос и более безопасную инвестицию.',
-          params_title: 'Параметры инвестиции',
-          param_location_label: 'Локация', param_location_value: 'Мутхамель · Аликанте', param_country_label: 'Страна', param_country_value: 'Испания', param_status_label: 'Статус', param_status_value: 'Новая инвестиция', param_delivery_label: 'Срок сдачи', param_delivery_value: 'В стадии реализации', param_offers_label: 'Количество предложений', param_offers_value: 'несколько вариантов', param_type_label: 'Тип', param_type_value: 'Инвестиционные апартаменты', param_character_label: 'Характер', param_character_value: 'Девелоперский проект', param_ownership_label: 'Форма собственности', param_ownership_value: 'Собственность',
-          why_title: 'Почему это хорошая инвестиция?', why_1_title: '📍 Премиальная локация', why_1_text: 'Рядом с Аликанте, пляжами San Juan и гольф-полем. Сильная локация как для жизни, так и для сезонной аренды.', why_2_title: '💰 Инвестиционный потенциал', why_2_text: 'Новые апартаменты в этой части Costa Blanca привлекают клиентов, которые ищут солнце, гольф и комфортный образ жизни.', why_3_title: '🏗️ Современный стандарт', why_3_text: 'Террасы, бассейн, общие зоны и новая архитектура повышают привлекательность проекта и облегчают последующую перепродажу.',
-          roi_title: 'ROI и потенциал дохода', roi_text_1: 'Инвестиции на Costa Blanca, особенно в локациях типа Bonalba (гольф + близость к морю), относятся к наиболее стабильным сегментам рынка недвижимости Испании. Сочетание круглогодичного климата, международной аудитории и ограниченного предложения новых проектов формирует устойчивый спрос на аренду.', roi_text_2: 'На практике это означает возможность получать доход как в краткосрочной модели аренды (туризм, гольф, летний сезон), так и в среднесрочной (зимовка клиентов из Северной Европы, remote work). Благодаря этому инвестор не зависит от одного формата аренды.', roi_li_1: '<strong>Оценочный ROI:</strong> около 5–7% в год при грамотном управлении арендой', roi_li_2: '<strong>Высокий сезон:</strong> май – октябрь (туризм + гольф)', roi_li_3: '<strong>Зимний сезон:</strong> средне- и долгосрочная аренда для клиентов из Европы', roi_li_4: '<strong>Профиль арендатора:</strong> premium-туристы, гольфисты, пары 45+, remote workers', roi_text_3: 'Дополнительным элементом ROI является потенциал роста стоимости недвижимости. Bonalba развивается как спокойная альтернатива прибрежным районам, а это означает растущий интерес и ограниченную конкуренцию новых проектов именно в этой локации.',
-          cta_title: 'Запросить информацию о Bonalba Golf Hills', cta_text: 'Свяжитесь с нами, чтобы получить актуальную доступность, планировки и детали инвестиции.', phone_label: 'Телефон:', cta_call: 'Позвонить сейчас', cta_whatsapp: 'Написать в WhatsApp', prev_image: 'Предыдущее фото', next_image: 'Следующее фото', prev_plans: 'Предыдущие планировки', next_plans: 'Следующие планировки'
-        }
-      };
+        };
 
       const main = document.getElementById('mainImage');
       const lightbox = document.getElementById('lightbox');
@@ -857,8 +795,7 @@
       const planTrack = document.getElementById('planTrack');
       const planImages = Array.from(document.querySelectorAll('.plans-track img'));
       const heroCard = document.querySelector('.hero-card');
-      const langButtons = Array.from(document.querySelectorAll('.lang-link'));
-      const whatsappInline = document.querySelector('[data-i18n="whatsapp_inline"]');
+            const whatsappInline = document.querySelector('[data-i18n="whatsapp_inline"]');
       const ctaWhatsapp = document.querySelector('[data-i18n="cta_whatsapp"]');
       const stickyWhatsapp = document.querySelector('.sticky-wa');
       const galleryImages = [
@@ -898,21 +835,24 @@
 
       function applyTranslations(lang) {
         const dict = translations[lang] || translations.pl;
-        investmentMeta.location = lang === 'ru' ? 'Мутхамель Аликанте' : 'Mutxamel Alicante';
+        investmentMeta.location = 'Mutxamel Alicante';
         applyLocaleHead(lang);
         document.querySelectorAll('[data-i18n]').forEach((el) => {
           const key = el.getAttribute('data-i18n');
           if (!dict[key]) return;
-          if (dict[key].includes('<strong>')) el.innerHTML = dict[key); else el.textContent = dict[key];
+          if (dict[key].includes('<strong>')) {
+            el.innerHTML = dict[key];
+          } else {
+            el.textContent = dict[key];
+          }
         });
         document.querySelectorAll('[data-i18n-aria-label]').forEach((el) => {
           const key = el.getAttribute('data-i18n-aria-label');
           if (dict[key]) el.setAttribute('aria-label', dict[key]);
         });
-        if (whatsappInline) whatsappInline.href = localeMeta[lang].whatsappTop;
-        if (ctaWhatsapp) ctaWhatsapp.href = localeMeta[lang].whatsappCta;
-        if (stickyWhatsapp) stickyWhatsapp.href = localeMeta[lang].whatsappCta;
-        langButtons.forEach((btn) => btn.classList.toggle('active-lang', btn.dataset.lang === lang));
+        if (whatsappInline) whatsappInline.href = localeMeta.pl.whatsappTop;
+        if (ctaWhatsapp) ctaWhatsapp.href = localeMeta.pl.whatsappCta;
+        if (stickyWhatsapp) stickyWhatsapp.href = localeMeta.pl.whatsappCta;
       }
 
       if (!main || !nextBtn || !prevBtn || !nextPlanBtn || !prevPlanBtn || !planTrack || !planImages.length) return;
@@ -925,12 +865,12 @@
       let autoplay = null;
       let autoplayStopped = false;
 
-      function getImageWord() { return currentLang === 'ru' ? 'фото' : 'zdjęcie'; }
-      function getPlanWord() { return currentLang === 'ru' ? 'план' : 'plan'; }
+      function getImageWord() { return 'zdjęcie'; }
+      function getPlanWord() { return 'plan'; }
 
       function showMain() {
         main.src = galleryImages[mainIndex];
-        main.alt = mainIndex === 0 ? localeMeta[currentLang].ogImageAlt : generateAlt(getImageWord(), mainIndex + 1);
+        main.alt = mainIndex === 0 ? localeMeta.pl.ogImageAlt : generateAlt(getImageWord(), mainIndex + 1);
       }
 
       function stopAutoplay() {
@@ -1016,27 +956,27 @@
       }, { passive: true });
 
       planImages.forEach((img, index) => {
-        const activatePlan = () => {
-          main.src = img.src;
-          planImages.forEach((el) => el.classList.remove('active-plan', 'zoom-preview'));
-          img.classList.add('active-plan');
-        };
-        img.addEventListener('mouseenter', () => { activatePlan(); img.classList.add('zoom-preview'); });
-        img.addEventListener('mouseleave', () => img.classList.remove('zoom-preview'));
-        img.addEventListener('click', activatePlan);
         img.alt = generateAlt(getPlanWord(), index + 1);
-      });
 
-      langButtons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          currentLang = btn.dataset.lang;
-          applyTranslations(currentLang);
+        img.addEventListener('mouseenter', () => {
+          img.classList.add('zoom-preview');
+          main.src = img.src;
+          main.alt = generateAlt(getPlanWord(), index + 1);
+        });
+
+        img.addEventListener('mouseleave', () => {
+          img.classList.remove('zoom-preview');
           showMain();
-          planImages.forEach((img, index) => { img.alt = generateAlt(getPlanWord(), index + 1); });
+        });
+
+        img.addEventListener('click', () => {
+          lightboxImage.src = img.src;
+          lightbox.classList.add('open');
+          lightbox.setAttribute('aria-hidden', 'false');
         });
       });
 
-      heroCard?.addEventListener('mouseenter', stopAutoplay);
+            heroCard?.addEventListener('mouseenter', stopAutoplay);
       heroCard?.addEventListener('mouseleave', startAutoplay);
       window.addEventListener('resize', updatePlans);
       document.addEventListener('visibilitychange', () => {
@@ -1044,7 +984,7 @@
         else if (!autoplayStopped) startAutoplay();
       });
 
-      applyTranslations(currentLang);
+      applyTranslations('pl');
       showMain();
       updatePlans();
       startAutoplay();
